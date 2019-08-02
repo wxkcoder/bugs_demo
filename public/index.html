@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <title></title>
+  <script src="https://aimg.tangdou.com/cdn/libs/tdsdk/tdsdk.1.0.0.min.js?t=7"> </script>
+  <script>
+    !function (n, t) {
+      var e = function (n, t, i) {
+                window.addEventListener ? e = function (n, t, e) {
+                  n.addEventListener(t, e, !1)
+                } : window.attachEvent && (e = function (n, t, e) {
+                  n.attachEvent("on" + t, e)
+                }), e(n, t, i)
+              },
+              i = n.documentElement,
+              o = "orientationchange" in window ? "orientationchange" : "resize",
+              d = function () {
+                var n = i.clientWidth;
+                if (n) {
+                  var t = n / 750 * 100 > 100 ? 100 : n / 750 * 100;
+                  i.style.fontSize = t + "px"
+                }
+              };
+      e(t, o, d), e(n, "DOMContentLoaded", d)
+    }(document, window), "addEventListener" in document && document.addEventListener("DOMContentLoaded", function () {
+    }, !1);
+  </script>
+  <style>
+    html {
+      font-size: 50px;
+    }
+    #loading-screen {
+      position: fixed;
+      display: block;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .5);
+      transition: opacity .35s ease-in;
+      -webkit-transition: opacity .35s ease-in;
+      opacity: 1
+    }
+
+    #loading-screen p {
+      display: block;
+      text-align: center;
+      margin-top: -.1rem;
+      font-size: .26rem;
+      color: #ccc
+    }
+
+    .loading-screen-container {
+      position: absolute;
+      width: 1.8rem;
+      height: 1.8rem;
+      z-index: 999;
+      text-align: center;
+      background: rgba(0, 0, 0, .55);
+      border-radius: .1rem;
+      margin: 0 auto 0 -.9rem;
+      left: 50%;
+      top: 35%
+    }
+
+    @-webkit-keyframes line-spin-fade-loader {
+      50% {
+        opacity: .3
+      }
+
+      100% {
+        opacity: 1
+      }
+    }
+
+    @keyframes line-spin-fade-loader {
+      50% {
+        opacity: .3
+      }
+
+      100% {
+        opacity: 1
+      }
+    }
+
+    .line-spin-fade-loader {
+      position: relative;
+      top: .6rem;
+      left: .79rem;
+      width: 1.8rem;
+      height: 1.3rem
+    }
+
+    .line-spin-fade-loader>div:nth-child(1) {
+      top: .2rem;
+      left: 0;
+      -webkit-animation: line-spin-fade-loader 1.2s -.84s infinite ease-in-out;
+      animation: line-spin-fade-loader 1.2s -.84s infinite ease-in-out
+    }
+
+    .line-spin-fade-loader>div:nth-child(2) {
+      top: .1363636rem;
+      left: .1363636rem;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      -webkit-animation: line-spin-fade-loader 1.2s -.72s infinite ease-in-out;
+      animation: line-spin-fade-loader 1.2s -.72s infinite ease-in-out
+    }
+
+    .line-spin-fade-loader>div:nth-child(3) {
+      top: 0;
+      left: .2rem;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      -webkit-animation: line-spin-fade-loader 1.2s -.6s infinite ease-in-out;
+      animation: line-spin-fade-loader 1.2s -.6s infinite ease-in-out
+    }
+
+    .line-spin-fade-loader>div:nth-child(4) {
+      top: -.1363636rem;
+      left: .1363636rem;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-animation: line-spin-fade-loader 1.2s -.48s infinite ease-in-out;
+      animation: line-spin-fade-loader 1.2s -.48s infinite ease-in-out
+    }
+
+    .line-spin-fade-loader>div:nth-child(5) {
+      top: -.2rem;
+      left: 0;
+      -webkit-animation: line-spin-fade-loader 1.2s -.36s infinite ease-in-out;
+      animation: line-spin-fade-loader 1.2s -.36s infinite ease-in-out
+    }
+
+    .line-spin-fade-loader>div:nth-child(6) {
+      top: -.1363636rem;
+      left: -.1363636rem;
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      -webkit-animation: line-spin-fade-loader 1.2s -.24s infinite ease-in-out;
+      animation: line-spin-fade-loader 1.2s -.24s infinite ease-in-out
+    }
+
+    .line-spin-fade-loader>div:nth-child(7) {
+      top: 0;
+      left: -.2rem;
+      -webkit-transform: rotate(90deg);
+      transform: rotate(90deg);
+      -webkit-animation: line-spin-fade-loader 1.2s -.12s infinite ease-in-out;
+      animation: line-spin-fade-loader 1.2s -.12s infinite ease-in-out
+    }
+
+    .line-spin-fade-loader>div:nth-child(8) {
+      top: .1363636rem;
+      left: -.1363636rem;
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg);
+      -webkit-animation: line-spin-fade-loader 1.2s 0s infinite ease-in-out;
+      animation: line-spin-fade-loader 1.2s 0s infinite ease-in-out
+    }
+
+    .line-spin-fade-loader>div {
+      background-color: #fff;
+      border-radius: .02rem;
+      margin: .02rem;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      position: absolute;
+      width: .05rem;
+      height: .15rem
+    }
+  </style>
+</head>
+
+<body>
+<noscript>
+  <strong style="font-size: 13px;">We're sorry but fes_nvshen doesn't work properly without JavaScript enabled.
+    Please enable it to continue.</strong>
+</noscript>
+<div id="app">
+
+</div>
+</body>
+
+</html>

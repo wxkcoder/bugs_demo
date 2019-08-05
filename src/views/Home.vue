@@ -1,7 +1,7 @@
 <template>
   <div class="list">
     <div @click="jump('bug1')" class="item">
-      bug1:ios10 push方式跳转后 自定义组件slot内容无法触发父容器touch事件
+      bug1: click me to view this bug（must ios10-ios11）
     </div>
   </div>
 </template>

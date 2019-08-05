@@ -7,7 +7,7 @@
 </style>
 <template>
   <div class="box" @touchstart="onTouchStart">
-    我是组件盒子部分 绑定了touchstart事件 触发时间：{{txt}}
+    i am parent, i bind a touchstart event
 
     <slot></slot>
   </div>

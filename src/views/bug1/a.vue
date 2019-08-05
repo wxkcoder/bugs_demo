@@ -7,7 +7,7 @@
 </style>
 <template>
   <bug1com>
-    <div class="content">我是slot部分 无法触发父级的touchstart事件</div>
+    <div class="content">i am slot content , i can't trigger parent's touchstart event</div>
   </bug1com>
 </template>
 <script>

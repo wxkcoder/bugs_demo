@@ -8,7 +8,7 @@
 <template>
   <div class="box" @touchstart="onTouchStart">
     i am parent, i bind a touchstart event
-
+    event time:{{txt}}
     <slot></slot>
   </div>
 </template>
